@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/game.css" />
+    <link rel="stylesheet" href="./styles/rules.css" />
+
+
+    <title>RPS - Jamshid</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo__div">
+          <img class="logo__img" src="./images/logo.svg" alt="" />
+        </div>
+
+        <div class="score">
+          <p class="score__title">score</p>
+          <span class="score__value">0</span>
+        </div>
+      </div>
+
+      <div class="game">
+        <div class="game__rps">
+          <div class="rps__item paper">
+            <img src="./images/paper-group.svg" alt="" onclick="paperChoice()">
+          </div>
+
+          <div class="rps__item scissors">
+            <img src="./images/scissors-group.svg" alt="" onclick="scisChoice()">
+            
+          </div>
+
+          <div class="rps__item rock">
+            <img src="./images/rock-group.svg" alt="" onclick="rockChoice()">
+            
+          </div>
+
+        </div>
+
+        <div class="winner">
+          <h2 class="winner__title"></h2>
+
+          <button class="again disable" onclick="again()">PLAY AGAIN</button>
+        </div>
+
+        <div class="comp__choice disable">
+          <img src="" alt="" class="compChoice">
+
+        </div>
+
+      </div>
+
+<!-- play again and winner title -->
+      <div class="winner">
+        <h2 class=" winner__title2"></h2>
+
+        <button class="again2" onclick="again()">PLAY AGAIN</button>
+      </div>
+<!-- last -->
+
+      <div class="rules-btn__bl">
+        <button class="rules-btn" onclick="rulesOn()">RULES</button>
+      </div>
+
+      <div id="rulesId" class="rules rules-disable">
+        <div class="rules__top">
+          <h4 class="rules__title">RULES</h4>
+          <button class="rules__xbtn" onclick="rulesX()">
+            <img src="./images/icon-close.svg" alt="xbtn" class="rules__xbtn-img">
+          </button>
+        </div>
+
+        <div class="rules__img">
+          <img src="./images/image-rules.svg" alt="">
+        </div>
+
+      </div>
+      
+    </div>
+
+    <!--   
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jamshid</a>.
+  </div> -->
+  </body>
+  <script src="./JS/main.js"></script>
+  <script src="./JS/game.js"></script>
+  <script src="./JS/rules.js"></script>
+</html>

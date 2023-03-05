@@ -1,0 +1,177 @@
+.game {
+    width: 90%;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game__rps {
+    width: 476px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    background: url(../images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rps__item {
+    width: 198px;
+    height: 194px;
+    border-radius: 50%;
+    transition: 0.3s;
+    /* box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706); */
+    /* box-shadow: 10px 4px 10px #fff; */
+
+}
+
+.rps__item img {
+    width: 100%;
+}
+
+.rps__item:hover {
+    box-shadow: 2px 4px 0px 25px #ffffff2d;
+
+}
+
+.disable {
+    display: none;
+}
+
+.comp__choice{
+    border-radius: 50%;
+}
+.compChoice{
+    width: 100%;
+}
+
+/* WINNER */
+
+.winner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner__title {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+
+/* play again btn */
+.again {
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    color: #3B4262;
+
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;
+
+    padding: 15px 60px;
+
+}
+
+.again:active{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.again:hover{
+    color: red;
+}
+
+
+/* media */
+@media screen and (max-width: 375px) {
+    .game {
+        width: 90%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .game__rps {
+        width: 476px;
+        height: 430px;
+        gap: 51px;
+
+    }
+
+    .rps__item {
+        width: 130px;
+        height: 133px;
+    }
+
+    .comp__choice{
+        width: 130px;
+    }
+
+
+    .winner__title {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 67px;
+        /* display: none; */
+    }
+
+    .again {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.5px;
+        padding: 15px 60px;
+        /* display: none; */
+    }
+
+    .winner__title2{
+        font-family: 'Barlow Semi Condensed';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 67px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .again{
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: 'Barlow Semi Condensed';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.5px;
+        color: #3B4262;
+
+        background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+        border-radius: 8px;
+
+        padding: 15px 60px;
+    }
+
+}

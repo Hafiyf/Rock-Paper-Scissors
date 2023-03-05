@@ -1,0 +1,87 @@
+
+.rules-btn__bl{
+    width: 90%;
+    height: 3rem;
+    margin-top: 4%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.rules-btn {
+
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+
+    padding: 0.8rem 2.5rem;
+    
+    background: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.rules-btn:hover{
+    color: #000;
+    background: #fff;
+}
+
+.rules {
+    width: 400px;
+    height: 415px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+
+    /* padding: 32px 32px; */
+
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;
+    background: #fff;
+    position: absolute;
+    top: 40%;
+    box-shadow: 0 0 0px 100rem #00000061;
+
+}
+
+
+.rules-disable {
+    display: none;
+}
+
+.rules__top {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.rules__xbtn {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules__xbtn img {
+    width: 100%;
+}
+
+.rules__xbtn:active {
+    background: #0000000a;
+}
+
+.rules__img img {
+    width: 100%;
+}
