@@ -8,7 +8,7 @@
 
 .game__rps {
     width: 476px;
-    height: 430px;
+    /* height: 430px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,7 @@
     background: url(../images/bg-triangle.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateX(20%);
 }
 
 .rps__item {
@@ -24,34 +25,67 @@
     height: 194px;
     border-radius: 50%;
     transition: 0.3s;
-    /* box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706); */
-    /* box-shadow: 10px 4px 10px #fff; */
+    
 
 }
 
 .rps__item img {
     width: 100%;
+    cursor: pointer;
 }
 
 .rps__item:hover {
-    box-shadow: 2px 4px 0px 25px #ffffff2d;
+    box-shadow: 2px 4px 0px 25px #ffffff1b;
 
 }
 
+.comp__choice {
+    width: 198px;
+    transition: 0.3s;
+    border-radius: 50%;
+    /* padding-top: 10px; */
+}
+
+
+/* DISABLE */
 .disable {
     display: none;
 }
 
-.comp__choice{
-    border-radius: 50%;
+.computer__choice {
+    display: flex;
+
+    flex-direction: column;
+    gap: 80px;
 }
-.compChoice{
+
+.comp__choice {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.compChoice {
     width: 100%;
 }
 
-/* WINNER */
+.u__picked {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    margin: 0;
+    padding: 0;
+}
 
-.winner{
+
+/* WINNER */
+.winner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,22 +125,67 @@
 
 }
 
-.again:active{
+.again:active {
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
 }
 
-.again:hover{
+.again:hover {
     color: red;
 }
 
 
+
+
+/* loader */
+.spinner {
+    width: 10rem;
+    height: 10rem;
+    display: grid;
+    border: 4.5px solid #0000;
+    border-radius: 50%;
+    border-color: #dbdcef #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.spinner::before {
+    border-color: #474bff #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+.spinner::after {
+    margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+/* loader end */
+
+
+
+
+
 /* media */
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
     .game {
-        width: 90%;
-        height: 70vh;
+        width: 100%;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -122,9 +201,10 @@
     .rps__item {
         width: 130px;
         height: 133px;
+        display: none;
     }
 
-    .comp__choice{
+    .comp__choice {
         width: 130px;
     }
 
@@ -145,7 +225,7 @@
         /* display: none; */
     }
 
-    .winner__title2{
+    .winner__title2 {
         font-family: 'Barlow Semi Condensed';
         font-style: normal;
         font-weight: 700;
@@ -156,7 +236,7 @@
         color: #FFFFFF;
     }
 
-    .again{
+    .again {
         cursor: pointer;
         transition: 0.3s;
         font-family: 'Barlow Semi Condensed';
