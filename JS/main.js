@@ -67,13 +67,7 @@ function rmDisable(){
 
 }
 
-function winnerValue(){
-  ++score;
-  scoreValue.textContent = score;
-  compChoice.style.boxShadow = "none";
-  document.querySelector(".rps__item").style.boxShadow =
-    "0px 0px 0px 45px #ffffff2d, 0px 0px 0px 90px #ffffff1b";
-}
+
 
 
 
@@ -122,6 +116,14 @@ function playRound() {
 
   winner.textContent = roundWinner;
   winner2.textContent = roundWinner;
+}
+
+function winnerValue(){
+  ++score;
+  scoreValue.textContent = score;
+  compChoice.style.boxShadow = "none";
+  document.querySelector(".rps__item").style.boxShadow =
+    "0px 0px 0px 45px #ffffff2d, 0px 0px 0px 90px #ffffff1b";
 }
 
 

@@ -59,7 +59,7 @@
     color: #565468;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
     .navbar {
         width: 311px;
         height: 75px;
